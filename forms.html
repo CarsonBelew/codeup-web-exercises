@@ -2,9 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Register With Us</title>
 </head>
 <body>
 
+<form method="POST" action="http://request-inspector.glitch.me">
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" required placeholder="enter your username" autofocus>
+    <br>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="enter your password">
+    <br>
+    <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Tell us about yourself!"></textarea>
+    <br>
+    <h3>How did you hear about us?</h3>
+    <label for="billboard">billboard
+    <input type="checkbox" name="selection" value="billboard" id="billboard">
+    </label>
+    <label for="radio advertisement">radio advertisement
+        <input type="checkbox" name="selection" value="radio advertisement" id="radio advertisement">
+    </label>
+    <label for="internet advertisement">internet advertisement
+        <input type="checkbox" name="selection" value="internet advertisement" id="internet advertisement">
+    </label>
+    <label for="other">other
+        <input type="checkbox" name="selection" value="other" id="other">
+    </label>
+    <h3>What web browser are you using?</h3>
+    <select name="browser">
+        <option value="Google Chrome">Google Chrome</option>
+        <option value="Safari">Safari</option>
+        <option value="Explorer">Explorer</option>
+    </select>
+    <br>
+    <button type="submit">Submit</button>
+</form>
 </body>
 </html>
