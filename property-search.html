@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property Search</title>
+</head>
+<body>
+<form method="POST" action="http://request-inspector.glitch.me">
+    <label for="property_type">Property Type:</label>
+    <input type="text" name="property_type" id="property_type" required placeholder="example: condo">
+    <br>
+    <label for="square_footage">Square Footage:</label>
+    <input type="text" name="square_footage" id="square_footage" required>
+    <br>
+    <label for="min_price">Minimum Price:</label>
+    <input type="text" name="min_price" id="min_price" required>
+    <br>
+    <label for="max_price">Maximum Price:</label>
+    <input type="text" name="max_price" id="max_price" required>
+    <br>
+    <label for="zipcode">Zipcode:</label>
+    <input type="text" name="zipcode" id="zipcode" required>
+    <br>
+    <label for="bedrooms">Number of bedroom(s)</label>
+    <select name="bedrooms" id="bedrooms" required>
+        <option value=""></option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4+">4+</option>
+    </select>
+    <br>
+    <label for="bathrooms">Number of bathroom(s)</label>
+    <select name="bathrooms" id="bathrooms" required>
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4+">4+</option>
+    </select>
+    <br>
+    <h2>Please provide any additional details!</h2>
+    <label for="etc"></label>
+    <textarea name="etc" id="etc" cols="30" rows="10"></textarea>
+    <br>
+    <button type="submit">Search now</button>
+</form>
+
+</body>
+</html>
