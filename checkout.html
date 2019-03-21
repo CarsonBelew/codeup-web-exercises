@@ -7,7 +7,7 @@
 
         input {
             border: black;
-            border-style: groove;
+            border: groove;
         }
 
         label {
@@ -16,6 +16,10 @@
 
         img {
             max-width: 70px;
+        }
+
+        body {
+            text-align: center;
         }
     </style>
 </head>
@@ -35,6 +39,7 @@
         <input type="radio" name="card" id="dc">
     </label>
     <br>
+    <br>
     <label for="ccnumber">Credit Card Number:</label>
         <input type="text" name="ccnumber" id="ccnumber" required placeholder="xxxx-xxxx-xxxx-xxxx">
     <br>
@@ -51,7 +56,7 @@
         <input type="checkbox" name="future" id="future" checked>Keep this credit card on file for future transactions
     <br>
     <hr>
-    <button type="submit"><img src="img/buynow.png"></button>
+    <button type="submit"><img src="img/buynow.png" alt="Buy Now!"></button>
 </form>
 
 </body>
