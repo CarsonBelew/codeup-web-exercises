@@ -1,0 +1,7 @@
+
+/*stylesheet for welcome.html*/
+
+.fancy-header {
+    color: purple; /* single line comment */
+    text-decoration: underline;
+}
