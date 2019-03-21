@@ -1,10 +1,67 @@
 /*stylesheet for welcome.html*/
 
-.fancy-header {
-    color: purple; /* single line comment */
-    text-decoration: underline;
+html {
+    cursor: crosshair;
 }
+
 img {
     width: 300px;
     height: 170px;
+}
 
+h2 {
+    color: tomato;
+    text-decoration: underline;
+}
+
+body {
+    background-color: antiquewhite;
+    background-image: url("../img/retro.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: ghostwhite;
+    font-family: 'Press Start 2P', cursive;
+}
+
+li {
+    list-style: none;
+
+}
+
+table, th, td {
+    border: 1px solid whitesmoke;
+}
+
+table {
+    width: 100px;
+    border-collapse: collapse;
+}
+
+th {
+    height: 50px;
+    text-align: center;
+}
+
+td {
+    height: 20px;
+    text-align: left;
+}
+
+a:hover{
+    color: greenyellow;
+}
+
+a:active {
+    color: red;
+}
+
+a {
+    color: teal;
+}
+
+.fancy-header {
+
+    color: tomato; /* single line comment */
+    text-decoration: underline;
+    text-align: center;
+}
