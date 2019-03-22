@@ -12,6 +12,8 @@ body, html {
 h2 {
     font-weight: lighter;
     text-align: center;
+    color: white;
+    text-shadow: 1px 2px 1px;
 }
 
 #grad1 {
