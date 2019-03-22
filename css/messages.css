@@ -1,0 +1,67 @@
+
+/*css for messages.html*/
+
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+h2 {
+    font-weight: lighter;
+    text-align: center;
+}
+
+#grad1 {
+    background: red;
+    background: -webkit-linear-gradient(left, orange, yellow, green, cyan, blue, violet);
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.message-info {
+    margin: 2% 5% 2% 4%;
+    background-color: cornflowerblue;
+    color: blue;
+    font-weight: bold;
+    border: lightgray 1px inset;
+    border-radius: 2px;
+}
+
+.message-success {
+    margin-bottom: 2%;
+    margin-left: 4%;
+    margin-right: 5%;
+    border-radius: 2px;
+    background-color: lightgreen;
+    color: green;
+    font-weight: bold;
+    border: lightgray 1px outset;
+}
+
+.message-warning {
+    margin-bottom: 2%;
+    margin-left: 4%;
+    margin-right: 5%;
+    border-radius: 2px;
+    background-color: yellow;
+    color: darkkhaki;
+    font-weight: bold;
+    border: lightgray 1px groove;
+}
+
+.message-error {
+    margin-bottom: 2%;
+    margin-left: 4%;
+    margin-right: 5%;
+    border-radius: 2px;
+    background-color: palevioletred;
+    color: red;
+    font-weight: bold;
+    border: lightgray 1px inset;
+}
