@@ -1,9 +1,5 @@
 /*stylesheet for welcome.html*/
 
-html {
-    cursor: crosshair;
-}
-
 img {
     width: 300px;
     height: 170px;
@@ -21,10 +17,11 @@ body {
     background-size: 100%;
     color: ghostwhite;
     font-family: 'Press Start 2P', cursive;
+    cursor: crosshair;
 }
 
 li {
-    list-style: none;
+    list-style: georgian;
 
 }
 
