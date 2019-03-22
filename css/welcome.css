@@ -1,13 +1,17 @@
 /*stylesheet for welcome.html*/
 
 img {
-    width: 300px;
-    height: 170px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 100px;
 }
 
 h2 {
     color: tomato;
     text-decoration: underline;
+    text-align: center;
 }
 
 body {
@@ -21,8 +25,8 @@ body {
 }
 
 li {
-    list-style: georgian;
-
+    list-style: none;
+    text-align: center;
 }
 
 table, th, td {
@@ -32,6 +36,7 @@ table, th, td {
 table {
     width: 100px;
     border-collapse: collapse;
+    margin: 0px auto;
 }
 
 th {
@@ -56,9 +61,21 @@ a {
     color: teal;
 }
 
+footer {
+    text-align: center;
+}
+
 .fancy-header {
 
     color: tomato; /* single line comment */
     text-decoration: underline;
+    text-align: center;
+}
+
+.margin {
+    margin-left: 435px;
+}
+
+p {
     text-align: center;
 }
