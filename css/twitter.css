@@ -25,8 +25,15 @@ header {
 a {
     color: var(--link-color);
 }
+
+.home_img {
+    height: 40px;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
 .top-nav {
-    background: var(--light-bg);
+    background-color: #FFF;
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -34,15 +41,26 @@ a {
 .nav {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: -14px;
 }
 .nav-link {
-    color: var(--main-link-color);
+    color: #3B94D9;
     font-weight: bold;
     text-decoration: none;
 }
 .nav-link:hover {
-    color: var(--link-color);
+    color: lightgray;
+}
+
+.notification .badge {
+    position: relative;
+    top: -10px;
+    right: -5px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    float: right;
 }
 
 .nav-item {
@@ -129,6 +147,8 @@ a {
 .btn-large {
     font-size: 1.3em;
     padding: 10px;
+    background-color: #3B94D9;
+    color: #FFFFFF;
 }
 .img-circle {
     border-radius: 100%;
