@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 800px){
+    .column.one-third,
+    .column.one-half{
+        width: 100%;
+    }
+}
+
+.container{
+    margin: 0 auto;
+    width: 80%;
+    max-width: 700px;
+}
+
+.row{
+    width: 100%;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column{
+    float: left;
+    width: 100%;
+    padding: 1em;
+    border: solid;
+}
+
+.column.one-half{
+    width: 50%;
+    background-color: gray;
+}
+
+.column.one-third{
+    width: 33.33%;
+    background-color: #3B94D9;
+}
+
+.column.one-fourth{
+    width: 25%;
+    background-color: #0fb784;
+}
+
+.column.one-eighth{
+    width: 12.5%;
+    background-color: red;
+}
