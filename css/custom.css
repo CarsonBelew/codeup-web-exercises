@@ -1,0 +1,23 @@
+.jumbotron-fluid{
+    background-image: url("../img/pizza.png");
+}
+
+h1{
+    text-align: center;
+    background-color: #DDDDDD;
+    opacity: 0.6;
+}
+
+.badge.badge-secondary{
+    border-radius: 60%;
+}
+
+.btn.btn-primary{
+    float: right;
+}
+
+
+
+label{
+    width: 100%;
+}
