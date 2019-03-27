@@ -25,3 +25,9 @@ h5.card-header{
     background-color: #007bff;
 }
 
+.container{
+    padding: 0;
+    width: 100%;
+}
+
+
