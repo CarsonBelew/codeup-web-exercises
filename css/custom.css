@@ -16,3 +16,11 @@ h1{
     float: right;
 }
 
+.btn{
+    float: right;
+}
+
+h5.card-header{
+    color: white;
+    background-color: cornflowerblue;
+}
