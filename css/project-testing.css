@@ -186,6 +186,7 @@ hr {
     #selected {
         text-align: center;
     }
+
 }
 
 /*SM SCREEN - screen bigger than 767 */
@@ -202,6 +203,7 @@ hr {
     #selected {
         text-align: center;
     }
+
 }
 
 /*MED SCREEN - screen bigger than 991*/
@@ -228,6 +230,13 @@ hr {
         top: 95px;
         right: 8px;
     }
+
+    .col-md-4{
+        width: 31.333333%;
+    }
+
+
+
     /*#last {*/
     /*text-align: right;*/
     /*}*/
@@ -262,6 +271,5 @@ hr {
     /*text-align: right;*/
     /*}*/
 }
-
 
 
