@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>External JS</title>
+    <style>
+
+        input {
+            border: black;
+            border: groove;
+        }
+
+        label {
+            font-family: "Courier New";
+        }
+
+        img {
+            max-width: 70px;
+        }
+
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<form method="POST" action="http://request-inspector.glitch.me">
+    <label for="visa"><img src="img/visa.png" alt="Visa">
+        <input type="radio" name="card" id="visa">
+    </label>
+    <label for="mc"><img src="img/mastercard.png" alt="Mastercard">
+        <input type="radio" name="card" id="mc">
+    </label>
+    <label for="amex"><img src="img/americanexpress.jpeg" alt="American Express">
+        <input type="radio" name="card" id="amex">
+    </label>
+    <label for="dc"><img src="img/discovercard.png" alt="Discover Card">
+        <input type="radio" name="card" id="dc">
+    </label>
+    <br>
+    <br>
+    <label for="ccnumber">Credit Card Number:</label>
+    <input type="text" minlength="16" maxlength="16" name="ccnumber" id="ccnumber" required placeholder="xxxx-xxxx-xxxx-xxxx">
+    <br>
+    <label for="expm">Expiration Month/Year:</label>
+    <input type="text" name="expm" id="expm" required placeholder="Example: 07/21">
+    <br>
+    <label for="code">Security Code:</label>
+    <input type="text" name="code" id="code" required placeholder="xxx">
+    <br>
+    <label for="address">Billing Address:</label>
+    <input type="text" name="address" id="address" required placeholder="Address/City/State/Zip">
+    <br>
+    <label for="future"></label>
+    <input type="checkbox" name="future" id="future" checked>Keep this credit card on file for future transactions
+    <br>
+    <hr>
+    <button type="submit"><img src="img/buynow.png" alt="Buy Now!"></button>
+</form>
+
+<script src="js/external.js"></script>
+</body>
+</html>
