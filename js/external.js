@@ -7,6 +7,7 @@ console.log("Hello from external JavaScript");
 alert("Welcome to my Website!");
 // user's favorite color
 var userInput = prompt("What is your favorite color?");
+alert("Wow, really!? " + userInput + " is my favorite color too!");
 console.log("Wow, really!? " + userInput + " is my favorite color too!");
 // complete exercise 3 from previous lesson
 alert("Our services provide classic movies for the low price of $3 per day. Please tell us how many days you rented each movie for! ");
