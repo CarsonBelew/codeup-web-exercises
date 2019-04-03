@@ -31,3 +31,32 @@ var H = (userInput3 * 3);
 alert("In total, you spent $" + (TLM + BB + H) + ". Please proceed to checkout! We hope you enjoyed the movies!");
 console.log("In total, you spent $" + (TLM + BB + H) + ". Please proceed to checkout! We hope you enjoyed the movies!");
 
+// google amazon facebook
+var googlePay = prompt("How much does Google pay per hour?");
+var amazonPay = prompt("How much does Amazon pay per hour?");
+var facebookPay = prompt("How much does Facebook pay per hour?");
+
+var googleHours = prompt("How many hours did you work at Google?");
+var amazonHours = prompt("How many hours did you work at Amazon?");
+var facebookHours = prompt("How many hours did you work at Facebook?");
+
+var totalPay = googlePay * googleHours;
+totalPay += amazonPay * amazonHours;
+totalPay += facebookPay * facebookHours;
+
+alert("You made: $" + totalPay + " this week!");
+
+// student and schedule
+var classSize = confirm("Is the class cureently full? If not, click cancel.");
+var classSchedule = confirm("Does the class confilct with your current schedule? If not, click cancel.");
+var enrollmentStatus = !classSize && !classSchedule;
+
+alert("Student enrollment status: " + enrollmentStatus);
+
+// product and items
+var numberOfItems = prompt("How many items did you buy?");
+var offerExpiration = confirm("Is the offer expired?");
+var membership = prompt("Are you a premium member?");
+
+var couponStatus = (membership || Number(numberOfItems) > 2) && offerExpiration;
+alert("Can customer use this offer? " + couponStatus);
