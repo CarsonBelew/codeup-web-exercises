@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 2
+    var sample = "Hello Codeup";
+    console.log(sample);
+    // character length of sample
+    console.log(sample.length);
+    // sample all uppercase
+    console.log(sample.toUpperCase());
+    // sample all lowercase
+    console.log(sample.toLowerCase());
+    // concatenating Students
+    console.log(sample + " Students");
+    sample = "Hello Codeup " + "Students";
+    console.log(sample);
+    // replace Students with Class
+    console.log(sample.replace("Students", "Class"));
+    sample = sample.replace("Students", "Class");
+    console.log(sample);
+    // finding place of C
+    console.log(sample.indexOf("C"));
+    // retrieving only Codeup
+    console.log(sample.substring(6, 12));
+
+    // 3
+    // how much do you pay?
+    var LittleMermaid = 3;
+    var BrotherBear = 5;
+    var Hercules = 1;
+    console.log((LittleMermaid + BrotherBear + Hercules) * 3);
+    // how much do you get in a week?
+    var Google = 400;
+    var Googlepay = (Google * 6);
+    var Amazon = 380;
+    var Amazonpay = (Amazon * 4);
+    var Facebook = 350;
+    var Facebookpay = (Facebook * 10);
+    console.log((Googlepay) + (Amazonpay) + (Facebookpay));
+    // student class and schedule
+
+    // product
+    var offerStatus = true;
+    var numberOfItems = 3;
+    var memberStatus = true;
+
+    if (memberStatus && offerStatus || numberOfItems > 2 && offerStatus){
+        console.log("You can use the offer!")
+    } else{
+        console.log("Sorry it's expired!")
+    }
+
+    // 4
+    var username = 'codeup';
+    var password = 'notastrongpassword';
+    //password length is greater than or equal to 5
+    console.log("Does the password have at least 5 characters?");
+    console.log(password.length >= 5);
+    // password must not include username
+    console.log("Does the password include the username?");
+    console.log(password.includes(username));
+    // username must be no more than 20 characters
+    console.log("Is the username no more than 20 characters?");
+    console.log(username.length <= 20);
+    // no whitespace
+    console.log(username.trim());
+    console.log(password.trim());
+</script>
+
+</body>
+</html>
