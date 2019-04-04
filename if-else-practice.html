@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>If-Else-Practice</title>
+</head>
+<body>
+
+<script>
+    var favAnimal = prompt("What do you like more, a cat or a dog?");
+
+    if (favAnimal === "cat"){
+        alert("You have great taste!");
+    } else if (favAnimal === "dog"){
+        alert("Have fun with all that poo!");
+    }
+
+    var favColor = confirm("Is your favorite color blue?") ?
+        alert("Blue is my favorite color too!") : alert("Something is wrong with you...");
+
+
+    var color = prompt("What color is the traffic light?");
+
+    switch (color.toLowerCase().trim()){
+        case "green":
+            console.log("go");
+            break;
+        case "yellow":
+            console.log("slow");
+            break;
+        case "red":
+            console.log("stop");
+            break;
+        default:
+            console.log("Blink");
+            alert("This is not a valid color!");
+    }
+
+
+</script>
+</body>
+</html>
