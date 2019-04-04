@@ -1,3 +1,4 @@
+(function () {
 "use strict";
 
 /**
@@ -15,6 +16,29 @@
  *
  * Can you refactor your code to use functions?
  */
+
+confirm("Would you like to enter a number? Please click OK...");
+var num = parseInt(prompt("Please type in a number!"));
+var numIsEven = (num % 2 === 0);
+var numAdd = (num + 100);
+var numIsPos = (num >= 0);
+var notNum = (!num);
+
+if (numIsEven){
+    alert("This number is even!");
+} else if (!numIsEven){
+    alert("This number is odd!");
+}
+alert("This is your number plus 100: " + numAdd + "!");
+if (numIsPos){
+    alert("This number is positive!");
+} else if (!numIsPos){
+    alert("This number is negative!")
+
+}
+if (notNum){
+    alert("This is not a number! Please type in a number.");
+}
 
 /* ########################################################################## */
 
@@ -35,6 +59,22 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+var colorName = prompt("Input a color!");
+
+function analyzeColor(blue, red, cyan) {
+    return colorName;
+}
+    if (colorName === "blue"){
+        alert("blue is the color of the sky");
+    } else  if (colorName === "red"){
+        alert("Strawberries are red");
+    } else if (colorName === "cyan"){
+        alert("I don't know anything about cyan");
+    } else{
+        alert("This color is not defined!");
+    }
+
+    console.log(analyzeColor());
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -82,6 +122,26 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+var luckyNumber = parseInt(prompt("What was your lucky number?"));
+var totalAmount = prompt("What is your original total before the discount?")
+
+function calculateTotal(initial, percent) {
+    return initial - (initial * percent);
+
+}
+if (luckyNumber === 0){
+    alert("You have no discount.");
+} else if (luckyNumber === 1){
+    alert("You get a 10% discount!");
+} else if (luckyNumber === 2){
+    alert("You get a 25% discount!");
+} else if (luckyNumber === 3){
+    alert("You get a 35% discount!");
+} else if (luckyNumber === 4){
+    alert("You get a 50% discount!");
+} else if (luckyNumber === 5){
+    alert("You get everything for free!!");
+}
 
 /**
  * TODO:
@@ -92,3 +152,4 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
+})();
