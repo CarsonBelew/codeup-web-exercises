@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+
+
+    <title>Map API Exercise</title>
+
+    <style>
+
+        h1 {
+            text-align: center;
+            color: #00ABA9;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #map {
+            height: 80vh;
+            width: 1100px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Mapbox API Exercise</h1>
+
+<div id='map'></div>
+
+
+
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/keys.js"></script>
+<script>
+
+    mapboxgl.accessToken = mapboxKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/outdoors-v10',
+        zoom: 11
+    });
+
+
+    // geocoding San Marcos
+    geocode("New Braunfels, Tx", mapboxKey).then(function(newB) {
+        console.log(newB);
+        map.setCenter(newB)
+    });
+    // making popup
+    var bjPopup = new mapboxgl.Popup()
+        .setHTML("<p>BJ's Restaurant!</p>");
+
+    var whataPopup = new mapboxgl.Popup()
+        .setHTML("<p>Whataburger has the best burgers in town!</p>");
+
+    var torchPopup = new mapboxgl.Popup()
+        .setHTML("<p>Torchys has excellent tacos!</p>");
+
+    var streetPopup = new mapboxgl.Popup()
+        .setHTML("<p>54th street has amazing blackened salmon!</p>");
+
+    // geocoding bjs restaurant, adding maker to it, adding popup to that marker
+    geocode("2951 Cold Spring Dr, New Braunfels, TX 78130", mapboxKey).then(function (bJ) {
+        console.log(bJ);
+        setTimeout(function () {
+            var marker = new mapboxgl.Marker()
+                .setLngLat([-98.075749, 29.729707])
+                .addTo(map);
+            map.setCenter(bJ);
+            map.setStyle('mapbox://styles/mapbox/navigation-guidance-day-v2');
+            map.setZoom(17);
+            marker.setPopup(bjPopup);
+        }, 4000);
+    });
+
+    geocode("8426 Broadway St, San Antonio, TX 78209", mapboxKey).then(function (whata) {
+        console.log(whata);
+        setTimeout(function () {
+            var marker = new mapboxgl.Marker()
+                .setLngLat([-98.46443, 29.516027])
+                .addTo(map);
+            map.setCenter(whata);
+            map.setZoom(13);
+            marker.setPopup(whataPopup)
+        }, 7000)
+    });
+
+    geocode("999 E E Basse Rd #183, San Antonio, TX 78209", mapboxKey).then(function (torch) {
+        console.log(torch);
+        setTimeout(function () {
+            var marker = new mapboxgl.Marker()
+                .setLngLat([-98.46974, 29.49692])
+                .addTo(map);
+            marker.setPopup(torchPopup)
+        }, 8000)
+    });
+
+    geocode("954 E Rector St, San Antonio, TX 78216", mapboxKey).then(function (street) {
+        console.log(street);
+        setTimeout(function () {
+            var marker = new mapboxgl.Marker()
+                .setLngLat([-98.478883, 29.51646])
+                .addTo(map);
+            marker.setPopup(streetPopup)
+        }, 9000)
+    });
+
+
+
+
+    // var restaurants = [
+    //     {
+    //         name: "Whataburger"
+    //     },
+    //         {
+    //             address: "8426 Broadway St, San Antonio, TX 78209"
+    //         },
+    //
+    //     {
+    //         name: "Formosa Garden"
+    //     },
+    //     {
+    //         address: "1011 NE Interstate 410 Loop, San Antonio, TX 78209"
+    //     }
+    // ];
+    //
+    // restaurants.forEach(function(name) {
+    //     console.log(name);
+    // })
+
+</script>
+
+
+</body>
+</html>

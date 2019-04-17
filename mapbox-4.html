@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+
+
+    <title>Map API 4</title>
+
+    <style>
+
+        h1 {
+            text-align: center;
+            color: #00ABA9;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #map {
+            height: 80vh;
+            width: 1100px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Mapbox API 4</h1>
+
+<div id='map'></div>
+
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/keys.js"></script>
+<script>
+
+    // San Antonio
+    mapboxgl.accessToken = mapboxKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/outdoors-v10',
+        center: [-98.4916, 29.4252],
+        zoom: 11
+    });
+
+        // geocodes Zion National Park address into coordinates then sets them as the center after 4 seconds
+    geocode("1 Zion Park Blvd State Route 9 Springdale UT 84767", mapboxKey).then(function(result) {
+        console.log(result);
+        setTimeout(function () {
+            map.setZoom(10);
+            map.setCenter(result);
+        }, 4000)
+    });
+
+        // reverse geocodes coordinates of Honolulu, get the address ffrom that reverse, geocode that address and set that as the center
+    reverseGeocode({lng: -157.858093, lat: 21.315603}, mapboxKey).then(function(result2) {
+        console.log(result2);
+        geocode(result2, mapboxKey).then(function(result3) {
+            console.log(result3);
+            setTimeout(function() {
+                map.setZoom(10);
+                map.setCenter(result3)
+            }, 7000)
+        })
+    });
+
+
+
+</script>
+
+
+</body>
+</html>

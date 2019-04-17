@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+
+
+    <title>Map API</title>
+
+    <style>
+
+        h1 {
+            text-align: center;
+            color: #00ABA9;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #map {
+            height: 80vh;
+            width: 1100px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Mapbox API</h1>
+
+<div id='map'></div>
+
+
+
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script>
+
+    // San Antonio
+    mapboxgl.accessToken = mapboxKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/outdoors-v10',
+        center: [-98.4916, 29.4252],
+        zoom: 11
+    });
+
+
+    // timeout for 2 seconds and zoom out to whole US
+    setTimeout(function() {
+        map.setZoom(3);
+        map.setCeneter([98.4842, 39.0119]);
+        map.setStyle('mapbox://styles/mapbox/satellite-v9')
+    }, 2000);
+
+
+
+</script>
+
+
+</body>
+</html>

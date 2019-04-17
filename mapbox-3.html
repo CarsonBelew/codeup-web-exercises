@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+
+
+    <title>Map API 3</title>
+
+    <style>
+
+        h1 {
+            text-align: center;
+            color: #00ABA9;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #map {
+            height: 80vh;
+            width: 1100px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Mapbox API 3</h1>
+
+<div id='map'></div>
+
+
+
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script>
+
+    // Washington DC
+    mapboxgl.accessToken = mapboxKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/outdoors-v10',
+        center: [-77.009003, 38.889931],
+        zoom: 12
+    });
+    // marker on Lincoln Memorial
+    var marker = new mapboxgl.Marker()
+        .setLngLat([-77.0502, 38.8893])
+        .addTo(map);
+
+    // after 7 seconds, changes marker to White House
+    // setTimeout(function () {
+    //     marker.setLngLat([-77.0365, 38.8977])
+    // }, 7000);
+
+            // set a popup on lincoln memorial
+    var lincolnPop = new mapboxgl.Popup()
+        .setHTML("<p>Lincoln Memorial!</p>")
+        .addTo(map);
+
+    marker.setPopup(lincolnPop)
+
+
+
+</script>
+
+
+</body>
+</html>
