@@ -27,7 +27,7 @@
 
 // change the background of a h1 when clicked
 $("h1").click(function(){
-    $("h1").css("background", "blue");
+    $(this).css("background", "blue");
 });
 
 // all <p> have a font-size of 18px when dbl clicked
