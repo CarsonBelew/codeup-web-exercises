@@ -5,10 +5,11 @@
 //
 // });
 
-// alerting an id
-alert($("#fav-animal").html());
+// // alerting an id
+// alert($("#fav-animal").html());
+//
+// // alerting a second id
+// alert($("#para").html());
 
-// alerting a second id
-alert($("#para").html());
 
-
+$(".codeup").css("border", "1px solid red");
