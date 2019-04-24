@@ -1,0 +1,27 @@
+.headFaq {
+    font-size: 50px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+dt {
+    font-size: 20px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+
+.invisible {
+    visibility: hidden;
+    text-align: center;
+    font-size: 15px;
+}
+
+.visiLink {
+    text-decoration: none;
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
