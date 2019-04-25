@@ -20,10 +20,10 @@ $("#lastList").click(function () {
     });
 });
 
-$("h3").click(function (e) {
-    console.log($(e.target));
-    $(this).next().css("font-weight", "bold");
-});
+// $("h3").click(function (e) {
+//     console.log($(e.target));
+//     $(this).next().css("font-weight", "bold");
+// });
 
 $("li").click(function (e){
     console.log($(e.target));
@@ -40,3 +40,10 @@ $("span").click(function(){
     $(".hideDiv").hide();
 });
 
+$("h3").click(function () {
+    $(this).next().slideToggle().css("display", "visible");
+});
+
+$(document).ready(function () {
+    $("<h2>Register for the site!</h2>").fadeIn(8000).appendTo("body");
+});
