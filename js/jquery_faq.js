@@ -44,8 +44,33 @@ $("span").click(function(){
 //     $(this).next().slideToggle().css("display", "visible");
 // });
 
-$("h2").delay(8000).fadeIn();
-
 $(document).ready(function () {
+
     $(".alert-success").show().fadeOut(8000);
 });
+
+$(".modal").delay(8000).fadeIn().fadeOut(3000);
+
+// make an image of yellowstone appear on hover of yellowstone h3
+$("#yellowstone").hover(function () {
+    $(".yellowstone-img").css("display", "block");
+}, function () {
+    $(".yellowstone-img").css("display", "none")
+}
+);
+
+// make an image of zion appear on hover of zion h3
+$("#zion").hover(function () {
+        $(".zion-img").css("display", "block");
+    }, function () {
+    $(".zion-img").css("display", "none")
+}
+);
+
+// make an image of sequoia appear on hover of sequoia h3
+$("#sequoia").hover(function () {
+        $(".sequoia-img").css("display", "block");
+    }, function () {
+    $(".sequoia-img").css("display", "none")
+}
+);
