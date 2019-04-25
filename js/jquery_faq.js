@@ -20,6 +20,7 @@ $("#lastList").click(function () {
     });
 });
 
-$("h3").click(function(){
-    $("ul").next().css("font-weight", "bold");
+$("h3").click(function (e) {
+    console.log($(e.target));
+    $(e.target).next().css("font-weight", "bold");
 });
