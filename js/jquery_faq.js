@@ -48,7 +48,7 @@ $(document).ready(function () {
     $(".alert-success").show().fadeOut(8000);
 });
 
-$(".modal").delay(8000).fadeIn().fadeOut(3000);
+$(".modal").delay(8000).fadeIn().fadeOut(1000);
 
 // // make an image of yellowstone appear on hover of yellowstone h3
 // $("#yellowstone").hover(function () {
