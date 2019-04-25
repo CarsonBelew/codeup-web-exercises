@@ -22,10 +22,21 @@ $("#lastList").click(function () {
 
 $("h3").click(function (e) {
     console.log($(e.target));
-    $(e.target).next().css("font-weight", "bold");
+    $(this).next().css("font-weight", "bold");
 });
 
 $("li").click(function (e){
     console.log($(e.target));
-    $(e.target).parent().children().first().css("color", "blue");
+    $(this).parent().children().first().css("color", "blue");
 });
+
+// // toggles last li when you click on any li of that ul
+// $("li").click(function (e){
+//     console.log($(e.target));
+//     $(e.target).parent().children().last().toggle();
+// });
+
+$("span").click(function(){
+    $(".hideDiv").hide();
+});
+

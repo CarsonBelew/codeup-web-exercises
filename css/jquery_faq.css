@@ -37,3 +37,19 @@ li {
     text-align: center;
 }
 
+.frame1, .frame2, .frame3 {
+    background: transparent;
+    padding: 8px;
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+
+span:hover {
+    cursor: pointer;
+}
+
+ul {
+    display: none;
+}
