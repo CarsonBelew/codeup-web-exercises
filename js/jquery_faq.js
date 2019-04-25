@@ -16,11 +16,16 @@ $("dt").dblclick(function () {
 
 $("#lastList").click(function () {
     $("ul").each(function () {
-        $(this).find("li").eq(3).css("background-color", "yellow");
+        $(this).children().last().css("background-color", "yellow");
     });
 });
 
 $("h3").click(function (e) {
     console.log($(e.target));
     $(e.target).next().css("font-weight", "bold");
+});
+
+$("li").click(function (e){
+    console.log($(e.target));
+    $(e.target).parent().children().first().css("color", "blue");
 });
