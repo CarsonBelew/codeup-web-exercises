@@ -46,6 +46,10 @@ li {
     text-align: center;
 }
 
+span {
+    border: 1px solid black;
+}
+
 span:hover {
     cursor: pointer;
 }
@@ -60,4 +64,5 @@ h2 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size:100%;
+    display: none;
 }
