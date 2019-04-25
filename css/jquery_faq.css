@@ -92,3 +92,11 @@ img {
     margin-right: auto;
     width: 250px;
 }
+
+.modal-content {
+    font-size: 20px;
+}
+
+.modal {
+    background-color: red;
+}

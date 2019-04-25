@@ -45,7 +45,6 @@ $("span").click(function(){
 // });
 
 $(document).ready(function () {
-
     $(".alert-success").show().fadeOut(8000);
 });
 
