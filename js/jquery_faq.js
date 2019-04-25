@@ -45,3 +45,7 @@ $("span").click(function(){
 // });
 
 $("h2").delay(8000).fadeIn();
+
+$(document).ready(function () {
+    $(".alert-success").show().fadeOut(8000);
+});
