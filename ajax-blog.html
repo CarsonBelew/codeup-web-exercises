@@ -3,15 +3,68 @@
 <html>
 <head>
     <title>Ajax Blog</title>
+
+    <style>
+        .hide{
+            display: none;
+        }
+
+    </style>
 </head>
 <body>
-<div id="posts">
-
+<h1 style="text-align: center">AJAX Blog</h1>
+<div class="container">
+    <div class="row">
+        <div id="posts">
+            <div class="well">
+                <h2>My First Blog</h2>
+                <div class="hide">
+                    <h3>
+                        Content
+                    </h3>
+                    <h4>
+                        Categories
+                    </h4>
+                    <p>date</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+
+<script src="js/jquery-2.2.4.js"></script>
+
 
 <script>
 (function() {
 "use strict";
+var blogData = '../data/blog.json';
+
+$.get(blogData).done(function (data) {
+    newHTML(data);
+}).fail(function () {
+    alert("ERROR");
+});
+
+function newHTML(posts) {
+    var postsHtml = '';
+    posts.forEach(function (post) {
+        postsHtml += "<h2>" + post.title + "</h2>";
+        postsHtml += "<div><h3>" + post.content + "</h3>";
+        postsHtml += "<h4>Categories: " + "<ul><li>";
+        post.categories.forEach(function (category) {
+            postsHtml += category + "</li><li>";
+        });
+        postsHtml += "</li></uL></h4>";
+        postsHtml += "<p>Posted on: " + post.date + "</p>" + "</div>" + "<hr>";
+    });
+    $("#posts").html(postsHtml);
+    $("h2").click(function () {
+        $(this).next().toggleClass("hide");
+    });
+}
 
 
 })();
