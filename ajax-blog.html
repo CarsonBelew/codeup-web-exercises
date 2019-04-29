@@ -13,28 +13,32 @@
             text-align: center;
         }
 
+        body{
+            background-image: url("img/sunset.jpeg");
+        }
+
     </style>
 </head>
 <body>
-<h1>AJAX Blog</h1>
-<div class="container">
-    <div class="row">
-        <div id="posts">
-            <div class="well">
-                <h2>My First Blog</h2>
-                <div class="hide">
-                    <h3>
-                        Content
-                    </h3>
-                    <h4>
-                        Categories
-                    </h4>
-                    <p>date</p>
+    <h1>AJAX Blog</h1>
+    <div class="container">
+        <div class="row">
+            <div id="posts">
+                <div class="well">
+                    <h2>My First Blog</h2>
+                    <div class="hide">
+                        <h3>
+                            Content
+                        </h3>
+                        <h4>
+                            Categories
+                        </h4>
+                        <p>date</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
 
@@ -68,7 +72,6 @@ function newHTML(posts) {
     $("h2").click(function () {
         $(this).next().toggleClass("hide");
     });
-
 }
 
 
