@@ -21,11 +21,16 @@ span {
 #forecastDiv {
     background-color: #DDDDDD;
     border: 1px solid black;
-    height: 10em;
+    height: 15em;
 }
 
 #map {
     height: 60vh;
     width: 1100px;
     margin: 0 auto;
+}
+
+img {
+    height: auto;
+    width: auto;
 }

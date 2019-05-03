@@ -12,9 +12,6 @@
 
     $.get(darkSkyData).done(function (data) {
         newHTML(data.daily.data);
-        var dateCurrent = (data.currently.time);
-        var dateObject = new Date(dateCurrent * 1000);
-        console.log(dateObject.toString());
     });
 
     function newHTML(posts) {
@@ -26,7 +23,7 @@
             postsHTML += "<div id='forecastDiv'>";
             postsHTML += "<h4>" + "High for today: " + posts[i].temperatureHigh + "</h4>";
             postsHTML += "<ul>";
-            postsHTML += "<li><strong>Icon: </strong><span>" + posts[i].icon + "</span>" + "</li>";
+            postsHTML += "<li><img src=" + icons[posts[i].icon] + "></li>";
             postsHTML += "<li><strong>Clouds: </strong><span>" + posts[i].summary + "</span>" + "</li>";
             postsHTML += "<li><strong>Humidity: </strong><span>" + posts[i].humidity + "</span>" + "</li>";
             postsHTML += "<li><strong>Wind speed: </strong>" + "<span>" + posts[i].windSpeed + "</span>" + "</li>";
@@ -36,6 +33,19 @@
         }
         $("#insertWeather").html(postsHTML)
     }
+
+    var icons = {
+        "clear-day" : "icon/SVG/Sun.svg",
+        "clear-night" : "icon/SVG/Moon-Full.svg",
+        "rain" : "icon/SVG/Cloud-Rain.svg",
+        "snow" : "icon/SVG/Cloud-Snow.svg",
+        "sleet" : "icon/SVG/Cloud-Hail.svg",
+        "wind" : "icon/SVG/Wind.svg",
+        "fog" : "icon/SVG/Cloud-Fog-Alt.svg",
+        "cloudy" : "icon/SVG/Cloud.svg",
+        "partly-cloudy-day" : "icon/SVG/Cloud-Sun.svg",
+        "partly-cloudy-night" : "icon/SVG/Cloud-Moon.svg"
+    };
 
     mapboxgl.accessToken = mapboxKey;
     var map = new mapboxgl.Map({
@@ -50,6 +60,24 @@
         mapboxgl: mapboxgl
     }));
 
-    var marker = new mapboxgl.Marker()
+    var marker = new mapboxgl.Marker({
+        draggable: true
+    })
         .setLngLat([-98.4916, 29.4252])
         .addTo(map);
+
+    function onDragEnd() {
+        var lngLat = marker.getLngLat();
+        console.log(lngLat);
+        var newDarkSkyData = corsUrl + darkSkyUrl + darkSkyApiKey + "/" + lngLat.lat + "," + lngLat.lng;
+
+        $.get(newDarkSkyData).done(function (data) {
+            newHTML(data.daily.data);
+        });
+        console.log(lngLat.lat);
+        console.log(lngLat.lng)
+
+
+    }
+
+    marker.on('dragend', onDragEnd);
