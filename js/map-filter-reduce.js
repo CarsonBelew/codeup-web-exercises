@@ -87,3 +87,18 @@ console.log(getAverageExperience(users));
 // ******************
 
 // ****************** Use reduce to get the longest email from the list of users.
+const longestEmail = users.reduce((longestEmail, user) => {
+    if (user.email.length >= longestEmail.length){
+        longestEmail = user.email;
+    }
+    return longestEmail;
+}, '');
+console.log(longestEmail);
+// ******************
+
+// ****************** Use reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
+const yourInstructors = users.reduce((sentence, user) => {
+    return sentence + user.name + ", "
+}, "Your instructors are: ");
+console.log(yourInstructors);
+// ******************
