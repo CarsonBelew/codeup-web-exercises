@@ -39,7 +39,7 @@
 <div>
     <div class="rightDiv"><button class="btn btnRight" type="button">Right</button></div>
     <div class="leftDiv"><button class="btn btnLeft" type="button">Left</button>
-        <div id="jokeFrame">Content</div>
+        <div id="jokeFrame"></div>
     </div>
 </div>
 
@@ -48,21 +48,36 @@
 <script>
     (function() {
         "use strict";
-        var leftQuote = $.ajax("http://api.icndb.com/jokes/random").done(function (data) {
-            newHTML(data);
-        });
 
-        var rightQuote = $.ajax("http://quotes.stormconsultancy.co.uk/random.json").done(function (data) {
-            console.log(data);
-        });
+        //Generate Chuck joke
 
-        function newHTML(posts) {
-            var postsHTML = '';
-            posts.forEach(function (post) {
-                postsHTML += "<p>" + post.title + "</p>";
+        function chuckN() {
+            $.ajax("http://api.icndb.com/jokes/random").done(function (joke) {
+                var string = '';
+                string += joke.value.joke;
+                $('#jokeFrame').append(string);
             });
-            $("#jokeFrame").html(newHTML);
         }
+
+        $('.btnLeft').click(function(){
+            $('#jokeFrame').html('');
+            chuckN();
+        });
+
+        //Generate Programming Quote
+
+        function generateQuote() {
+            $.ajax("https://cors-anywhere.herokuapp.com/http://quotes.stormconsultancy.co.uk/random.json").done(function(data) {
+                console.log(data);
+                var string = '<p><b>' + "''" + data.quote + "''" + '</b></p>' + '<p>' + '- ' + data.author + '</p>';
+                $('#jokeFrame').append(string);
+            });
+        }
+
+        $('.btnRight').click(function() {
+            $('#jokeFrame').html('');
+            generateQuote()
+        });
 
     })();
 
